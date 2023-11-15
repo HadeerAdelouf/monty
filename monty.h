@@ -45,6 +45,9 @@ typedef struct instruction_s
 void pall_stack(stack_t **head, unsigned int counter);
 void push_stack(stack_t **head, unsigned int counter);
 void pint(stack_t **head, unsigned int counter);
+void pop_stack(stack_t **head, unsigned int counter);
+void swap_stack(stack_t **head, unsigned int counter);
+void nop(stack_t **head, unsigned int counter);
 
 void choose_function(stack_t **head, char *token, unsigned int counter);
 void free_all(stack_t **head);
