@@ -16,6 +16,7 @@ void choose_function(stack_t **head, char *token, unsigned int counter)
 		{"swap", swap_stack},
 		{"pop", pop_stack},
 		{"nop", nop},
+		{NULL, NULL}
 	};
 
 	int move = 0;
