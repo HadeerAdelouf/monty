@@ -54,6 +54,5 @@ void stack_div(stack_t **head, unsigned int counter);
 
 void choose_function(stack_t **head, char *token, unsigned int counter);
 void free_all(stack_t **head);
-ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 #endif
 
