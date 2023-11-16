@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	while ((read_file = getline(&Ptr, &buff_size, fi_le)) != -1)
+	while ((read_file = _getline(&Ptr, &buff_size, fi_le)) != -1)
 	{
 		tokens = strtok(Ptr, LIMIT);
 		count++;
