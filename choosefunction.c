@@ -17,6 +17,8 @@ void choose_function(stack_t **head, char *token, unsigned int counter)
 		{"pop", pop_stack},
 		{"nop", nop},
 		{"add", stack_add},
+		{"sub", stack_sub},
+		{"div", stack_div},
 		{NULL, NULL}
 	};
 

@@ -21,3 +21,48 @@ void stack_add(stack_t **head, unsigned int counter)
 	pop_stack(head, counter);
 	(*head)->n = f_add;
 }
+/**
+ * stack_sub - subtracts top element from the second top element of the stack
+ * @head: Head of the list
+ * @counter: Number of the line
+ * Return:Nothing
+ **/
+
+void stack_sub(stack_t **head, unsigned int counter)
+{
+	if (!head || !(*head) || !(*head)->next)
+	{
+		fprintf(stderr, "L%u: can't sub, stack too short\n", counter);
+		exit(EXIT_FAILURE);
+	}
+	(*head)->next->n -= (*head)->n;
+	(*head) = (*head)->next;
+	free((*head)->prev);
+	(*head)->prev = NULL;
+}
+
+/**
+ *stack_div -divides the second top element by the top element of the stack
+ * @head: The head of the Stack.
+ * @counter: Number of the line.
+ * Return: void
+ **/
+void stack_div(stack_t **head, unsigned int counter)
+{
+	if (!head || !(*head) || !(*head)->next)
+	{
+		fprintf(stderr, "L%u: can't div, stack too short\n", counter);
+		exit(EXIT_FAILURE);
+	}
+
+	if ((*head)->n == 0)
+	{
+		fprintf(stderr, "L%u: division by zero\n", counter);
+		exit(EXIT_FAILURE);
+	}
+
+	(*head)->next->n /= (*head)->n;
+	(*head) = (*head)->next;
+	free((*head)->prev);
+	(*head)->prev = NULL;
+}
