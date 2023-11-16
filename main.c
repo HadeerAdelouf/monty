@@ -9,6 +9,7 @@
 
 int main(int argc, char *argv[])
 {
+
 	stack_t *head = NULL;
 	ssize_t read_file;
 	size_t buff_size;

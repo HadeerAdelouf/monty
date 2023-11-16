@@ -9,7 +9,7 @@
 #include <sys/types.h>
 #include <ctype.h>
 
-#define LIMIT" \n"
+#define LIMIT " \n"
 
 
 /**
