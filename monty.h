@@ -51,7 +51,8 @@ void nop(stack_t **head, unsigned int counter);
 void stack_add(stack_t **head, unsigned int counter);
 void stack_sub(stack_t **head, unsigned int counter);
 void stack_div(stack_t **head, unsigned int counter);
-
+void stack_mul(stack_t **head, unsigned int counter);
+void stack_mod(stack_t **head, unsigned int counter);
 void choose_function(stack_t **head, char *token, unsigned int counter);
 void free_all(stack_t **head);
 #endif

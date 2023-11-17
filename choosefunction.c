@@ -1,11 +1,10 @@
 #include "monty.h"
 /**
- * choose_function - Select function for needing
+ * choose_function - Select function to use
  * @head: Head of the list
  * @token: Parameters for entry
  * @counter: Number of the line
- *
- * Return: Void - Nothing
+ * Return: Void
  **/
 void choose_function(stack_t **head, char *token, unsigned int counter)
 {
@@ -19,6 +18,8 @@ void choose_function(stack_t **head, char *token, unsigned int counter)
 		{"add", stack_add},
 		{"sub", stack_sub},
 		{"div", stack_div},
+		{"mul", stack_mul},
+		{"mod", stack_mod},
 		{NULL, NULL}
 	};
 

@@ -66,3 +66,47 @@ void stack_div(stack_t **head, unsigned int counter)
 	free((*head)->prev);
 	(*head)->prev = NULL;
 }
+/**
+ * stack_mul -  multiplies the second top element with the top element
+ * @head: Head of the list
+ * @counter: Number of the line
+ * Return: Void
+ **/
+
+void stack_mul(stack_t **head, unsigned int counter)
+{
+	if (!head || !(*head) || !(*head)->next)
+	{
+		fprintf(stderr, "L%u: can't mul, stack too short\n", counter);
+		exit(EXIT_FAILURE);
+	}
+	(*head)->next->n *= (*head)->n;
+	(*head) = (*head)->next;
+	free((*head)->prev);
+	(*head)->prev = NULL;
+}
+/**
+ * stack_mod - Computes the modulus
+ * @head: A pointer to the top mode node
+ * @counter: The current line number of a Monty bytecodes file.
+ *
+ */
+void stack_mod(stack_t **head, unsigned int counter)
+{
+	if ((*head)->next == NULL || (*head)->next->next == NULL)
+	{
+		fprintf(stderr, "L%u: division by zero\n", counter);
+		exit(EXIT_FAILURE);
+		return;
+	}
+
+	if ((*head)->next->n == 0)
+	{
+		fprintf(stderr, "L%u: division by zero\n", counter);
+		exit(EXIT_FAILURE);
+		return;
+	}
+
+	(*head)->next->next->n %= (*head)->next->n;
+	pop(head, counter);
+}
