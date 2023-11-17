@@ -108,5 +108,5 @@ void stack_mod(stack_t **head, unsigned int counter)
 	}
 
 	(*head)->next->next->n %= (*head)->next->n;
-	pop(head, counter);
+	pop_stack(head, counter);
 }
