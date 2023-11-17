@@ -22,8 +22,8 @@ void free_all(stack_t **head)
 
 /**
  * push_stack - Function for push an element to the stack.
- * @head: Head of the list
- * @counter: Number of the line
+ * @head: Head of the list.
+ * @counter: Number of the line.
  * Return: void - nothing
  **/
 
