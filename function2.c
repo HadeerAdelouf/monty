@@ -1,7 +1,7 @@
 #include"monty.h"
 /**
  * pop_stack - Removes the top element of the stack.
- * @head: Head of the list
+ * @head: Head of the list0
  * @counter: Number of the line
  * Return: void - nothing
  **/
@@ -24,7 +24,7 @@ void pop_stack(stack_t **head, unsigned int counter)
  * swap_stack - Swaps the top two elements of the stack.
  * @head: Head of the list
  * @counter: Number of the line
- * Return: Void - Nothing
+ * Return: Void
  **/
 
 void swap_stack(stack_t **head, unsigned int counter)
